@@ -33,6 +33,9 @@ RUN mkdir -p /opt/airflow && chmod 777 /opt/airflow && \
     mkdir -p /opt/airflow/logs && \
     mkdir -p /opt/airflow/plugins
 
+## Copy the DAG 'scraper.py' to the DAGs folder of the container
+## Copy the requirements.txt file to the container
+## run the command 'pip install -r requirements.txt' to install the dependencies
 
 # Initialize the database
 RUN airflow db init && \
