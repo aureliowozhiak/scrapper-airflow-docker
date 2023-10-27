@@ -22,11 +22,11 @@ This guide outlines the steps to build and run a Docker container with Apache Ai
     docker run -it -p 8080:8080 airflow_dev airflow webserver
     ```
 
-    This will start the container in the background and map port 8080 from the container to port 8080 on your EC2 instance.
+    This will start the container in the background and map port 8080 from the container to port 8080.
 
 ## Step 3: Access the Apache Airflow Web UI
 
-1. After the container has started, you can access the Apache Airflow Web UI in your web browser by entering your EC2 instance's IP and port 8080. Use the following format:
+1. After the container has started, you can access the Apache Airflow Web UI in your web browser port 8080. Use the following format:
 
     ```
     http://<your_ec2_ip>:8080/
@@ -37,11 +37,9 @@ This guide outlines the steps to build and run a Docker container with Apache Ai
     http://localhost:8080/
     ```
 
-2. Ensure that port 8080 is open in your EC2 instance's security group to allow internet access.
+2. Ensure that port 8080 is open.
 
-3. Replace `<your_ec2_ip>` with the actual IP address of your EC2 instance.
-
-4. User: admin & Password:admin
+3. User: admin & Password:admin
 
 Please keep in mind that this guide provides a basic setup for running Apache Airflow in a Docker container. In a production environment, consider security, scalability, and data persistence, such as using an external database for Apache Airflow and implementing additional configurations.
 
