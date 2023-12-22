@@ -11,6 +11,7 @@ ENV AIRFLOW__WEBSERVER__AUTH_BACKEND=airflow.contrib.auth.backends.password_auth
 
 #install dependencies
 RUN apt-get update && \
+    apt-get install -y nano && \
     apt-get install -y --no-install-recommends \
         freetds-bin \
         build-essential \
